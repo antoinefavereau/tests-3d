@@ -9,7 +9,7 @@ export type Techno = {
   slug: string;
   name: string;
   description: string;
-  category: "library" | "framework" | "native" | "engine";
+  category: "library" | "native" | "engine";
   tags: string[];
   infoCards?: TechnoInfoCard[];
 };
@@ -128,14 +128,6 @@ export const technos: Techno[] = [
     ],
   },
   {
-    slug: "aframe",
-    name: "A-Frame",
-    description:
-      "A web framework for building VR experiences. Built on top of Three.js, uses HTML-like syntax.",
-    category: "framework",
-    tags: ["VR", "HTML", "Three.js"],
-  },
-  {
     slug: "webgl",
     name: "Raw WebGL",
     description:
@@ -190,13 +182,5 @@ export const technos: Techno[] = [
         accent: "text-blue-400",
       },
     ],
-  },
-  {
-    slug: "spline",
-    name: "Spline",
-    description:
-      "A design tool for 3D web experiences. No-code approach with a React/JS integration runtime.",
-    category: "framework",
-    tags: ["No-code", "Design", "Runtime"],
   },
 ];

@@ -20,17 +20,11 @@ import { BoxIcon } from "lucide-react";
 
 const categoryLabels: Record<Techno["category"], string> = {
   library: "Libraries",
-  framework: "Frameworks",
   engine: "Engines",
   native: "Native APIs",
 };
 
-const categoryOrder: Techno["category"][] = [
-  "native",
-  "library",
-  "framework",
-  "engine",
-];
+const categoryOrder: Techno["category"][] = ["native", "library", "engine"];
 
 function groupByCategory(technos: Techno[]) {
   return categoryOrder
