@@ -78,6 +78,26 @@ export const technos: Techno[] = [
       "A powerful, feature-rich 3D engine built by Microsoft. First-class TypeScript support and a full editor.",
     category: "engine",
     tags: ["WebGL", "WebGPU", "Physics"],
+    infoCards: [
+      {
+        label: "Engine focus",
+        value: "Game Engine",
+        sub: "Built-in physics & collisions",
+        accent: "text-blue-500",
+      },
+      {
+        label: "Rendering",
+        value: "WebGPU / WebGL",
+        sub: "Highly optimized default shaders",
+        accent: "text-cyan-500",
+      },
+      {
+        label: "Architecture",
+        value: "Object Oriented",
+        sub: "Scene, Mesh, Material hierarchy",
+        accent: "text-sky-500",
+      },
+    ],
   },
   {
     slug: "playcanvas",
