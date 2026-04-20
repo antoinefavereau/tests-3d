@@ -103,9 +103,29 @@ export const technos: Techno[] = [
     slug: "playcanvas",
     name: "PlayCanvas",
     description:
-      "A game engine and editor for building interactive 3D experiences. Cloud-based collaboration.",
+      "A high-performance WebGL/WebGPU engine. Best known for its web-based editor and incredible performance on mobile.",
     category: "engine",
-    tags: ["Game Engine", "Editor", "Physics"],
+    tags: ["WebGL", "Open Source", "Mobile"],
+    infoCards: [
+      {
+        label: "Performance",
+        value: "Lightweight",
+        sub: "Optimized for mobile & load times",
+        accent: "text-red-500",
+      },
+      {
+        label: "Collaboration",
+        value: "Cloud-first",
+        sub: "Built for team-based editor work",
+        accent: "text-orange-500",
+      },
+      {
+        label: "Tech",
+        value: "Component-based",
+        sub: "Entity-Component-System (ECS) like",
+        accent: "text-amber-500",
+      },
+    ],
   },
   {
     slug: "aframe",
