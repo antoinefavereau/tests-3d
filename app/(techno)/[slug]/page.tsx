@@ -1,6 +1,7 @@
 import { technos } from "@/lib/technos";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { InfoCards } from "@/components/info-cards";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -26,10 +27,13 @@ export default async function TechnoPage({ params }: Props) {
   if (!techno) notFound();
 
   return (
-    <div className="flex flex-1 items-center justify-center text-muted-foreground">
-      <p className="text-sm">
-        Content for <span className="font-semibold text-foreground">{techno.name}</span> coming soon.
-      </p>
+    <div className="flex flex-1 flex-col gap-4">
+      <div className="flex flex-1 items-center justify-center text-muted-foreground border rounded-xl bg-card/50">
+        <p className="text-sm">
+          Content for <span className="font-semibold text-foreground">{techno.name}</span> coming soon.
+        </p>
+      </div>
+      <InfoCards cards={techno.infoCards} />
     </div>
   );
 }

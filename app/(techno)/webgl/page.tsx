@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { WebGLViewer } from "@/components/raw-webgl/webgl-viewer";
+import { InfoCards } from "@/components/info-cards";
+import { technos } from "@/lib/technos";
 
 export const metadata: Metadata = {
   title: "Raw WebGL — 3D Web Tech Explorer",
@@ -18,6 +20,7 @@ export default function WebGLPage() {
         </p>
       </div>
       <WebGLViewer />
+      <InfoCards cards={technos.find(t => t.slug === "webgl")?.infoCards} />
     </div>
   );
 }

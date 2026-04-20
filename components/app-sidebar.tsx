@@ -25,7 +25,12 @@ const categoryLabels: Record<Techno["category"], string> = {
   native: "Native APIs",
 };
 
-const categoryOrder: Techno["category"][] = ["native", "library", "framework", "engine"];
+const categoryOrder: Techno["category"][] = [
+  "native",
+  "library",
+  "framework",
+  "engine",
+];
 
 function groupByCategory(technos: Techno[]) {
   return categoryOrder
@@ -53,7 +58,9 @@ export function AppSidebar() {
                 </div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">3D Web Explorer</span>
-                  <span className="text-xs text-muted-foreground">Compare technologies</span>
+                  <span className="text-xs text-muted-foreground">
+                    Compare technologies
+                  </span>
                 </div>
               </Link>
             </SidebarMenuButton>
