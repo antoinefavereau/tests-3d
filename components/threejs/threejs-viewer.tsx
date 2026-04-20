@@ -130,7 +130,7 @@ export function ThreejsViewer() {
     handleResize();
 
     // ── Animation Loop ──────────────────────────────────────────────────────
-    let lastTime = 0;
+    const timer = new THREE.Timer();
     const fpsSamples: number[] = [];
     let fpsTimer = 0;
     let animFrame = 0;
@@ -138,10 +138,10 @@ export function ThreejsViewer() {
     const animate = (time: number) => {
       animFrame = requestAnimationFrame(animate);
 
-      const dt = time - lastTime || 16.67;
-      lastTime = time;
+      timer.update(time);
+      const dt = timer.getDelta() * 1000;
 
-      fpsSamples.push(1000 / dt);
+      fpsSamples.push(1000 / (dt || 16.67));
       if (fpsSamples.length > 30) fpsSamples.shift();
       fpsTimer += dt;
 

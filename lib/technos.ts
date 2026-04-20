@@ -50,6 +50,26 @@ export const technos: Techno[] = [
       "A React renderer for Three.js. Brings the full power of Three.js into a declarative component model.",
     category: "library",
     tags: ["React", "Three.js", "Declarative"],
+    infoCards: [
+      {
+        label: "Paradigm",
+        value: "Declarative",
+        sub: "Scene graph as components",
+        accent: "text-pink-400",
+      },
+      {
+        label: "Eco-system",
+        value: "Drei / Cannon",
+        sub: "Huge library of helpers",
+        accent: "text-rose-400",
+      },
+      {
+        label: "Performance",
+        value: "Native",
+        sub: "Bypasses React for render loop",
+        accent: "text-orange-400",
+      },
+    ],
   },
   {
     slug: "babylonjs",
