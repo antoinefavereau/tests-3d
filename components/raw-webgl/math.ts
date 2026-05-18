@@ -22,6 +22,23 @@ export function mat4Multiply(a: Mat4, b: Mat4): Mat4 {
   return out;
 }
 
+/** Multiply mat4 by translation vector [x, y, z] */
+export function mat4Translate(m: Mat4, x: number, y: number, z: number): Mat4 {
+  m[12] = m[0] * x + m[4] * y + m[8] * z + m[12];
+  m[13] = m[1] * x + m[5] * y + m[9] * z + m[13];
+  m[14] = m[2] * x + m[6] * y + m[10] * z + m[14];
+  m[15] = m[3] * x + m[7] * y + m[11] * z + m[15];
+  return m;
+}
+
+/** Multiply mat4 by scale vector [sx, sy, sz] */
+export function mat4Scale(m: Mat4, sx: number, sy: number, sz: number): Mat4 {
+  m[0] *= sx; m[1] *= sx; m[2] *= sx; m[3] *= sx;
+  m[4] *= sy; m[5] *= sy; m[6] *= sy; m[7] *= sy;
+  m[8] *= sz; m[9] *= sz; m[10] *= sz; m[11] *= sz;
+  return m;
+}
+
 /** Standard OpenGL perspective matrix (right-handed, NDC z in [-1, 1]) */
 export function mat4Perspective(
   fovY: number,
